@@ -24,36 +24,21 @@
   --font:'Barlow','Calibri','Segoe UI',Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:var(--font);
-  font-weight:400;
-  color:var(--black);
-  background:#fff;
-  line-height:1.5;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+body{font-family:var(--font);font-weight:400;color:var(--black);background:#fff;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
 
-/* ---------- header (rode stamp) ---------- */
+/* ---------- header ---------- */
 header{background:var(--red);color:#fff;padding:50px 0 44px}
-header .eyebrow{
-  font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-  color:rgba(255,255,255,.9);
-}
-header h1{
-  font-weight:300;font-size:clamp(40px,6vw,64px);line-height:1.05;
-  margin:8px 0 16px;letter-spacing:-.01em;
-}
+header .eyebrow{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.9)}
+header h1{font-weight:300;font-size:clamp(40px,6vw,64px);line-height:1.05;margin:8px 0 16px;letter-spacing:-.01em}
 header h1 strong{font-weight:600}
-header p{max-width:780px;font-size:18px;color:rgba(255,255,255,.92);font-weight:400}
+header p{max-width:820px;font-size:18px;color:rgba(255,255,255,.92)}
 
 /* ---------- sections ---------- */
 section{padding:48px 0}
 section.alt{background:var(--grey-bg)}
-.section-title{
-  font-size:32px;font-weight:600;color:var(--red);line-height:1.2;margin-bottom:6px;
-}
-.section-intro{max-width:840px;color:var(--grey-dark);margin-bottom:28px;font-size:17px}
+.section-title{font-size:32px;font-weight:600;color:var(--red);line-height:1.2;margin-bottom:6px}
+.section-intro{max-width:860px;color:var(--grey-dark);margin-bottom:28px;font-size:17px}
 .section-intro strong{color:var(--black);font-weight:600}
 
 /* ---------- assen ---------- */
@@ -71,77 +56,63 @@ section.alt{background:var(--grey-bg)}
 .level p{font-size:14.5px;color:var(--grey-dark)}
 
 /* ---------- de grid ---------- */
-.gridbox{
-  background:#fff;border:1px solid var(--grey-light);padding:30px;
-  display:grid;grid-template-columns:40px 1fr;grid-template-rows:1fr 40px;gap:14px;
-}
-.y-axis{
-  grid-column:1;grid-row:1;writing-mode:vertical-rl;transform:rotate(180deg);
-  text-align:center;font-weight:600;color:var(--red);font-size:15px;letter-spacing:.06em;text-transform:uppercase;
-  display:flex;align-items:center;justify-content:center;
-}
-.x-axis{
-  grid-column:2;grid-row:2;text-align:center;font-weight:600;color:var(--red);font-size:15px;
-  letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;
-}
-.cells{
-  grid-column:2;grid-row:1;display:grid;
-  grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:10px;
-}
-.cell{
-  padding:16px;min-height:120px;color:#fff;
-  display:flex;flex-direction:column;justify-content:space-between;
-  text-decoration:none;border:1px solid transparent;transition:opacity .12s ease;
-}
+.gridbox{background:#fff;border:1px solid var(--grey-light);padding:30px;display:grid;grid-template-columns:40px 1fr;grid-template-rows:1fr 40px;gap:14px}
+.y-axis{grid-column:1;grid-row:1;writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-weight:600;color:var(--red);font-size:15px;letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;justify-content:center}
+.x-axis{grid-column:2;grid-row:2;text-align:center;font-weight:600;color:var(--red);font-size:15px;letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;justify-content:center}
+.cells{grid-column:2;grid-row:1;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:10px}
+.cell{padding:16px;min-height:120px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;transition:opacity .12s ease}
 .cell:hover{opacity:.88;color:#fff}
 .cell .pos{font-size:11.5px;font-weight:600;opacity:.92}
 .cell .nm{font-size:22px;font-weight:600;line-height:1.05}
 .cell .arrow{font-size:13px;font-weight:500;opacity:.9}
 .cell.dark{color:var(--black)}
 .cell.dark:hover{color:var(--black)}
-
-.c-blue-dark{background:var(--blue-dark)}
-.c-green{background:var(--green)}
-.c-yellow{background:var(--yellow)}
-.c-blue-light{background:var(--blue-light)}
-.c-grey-dark{background:var(--grey-dark)}
-.c-pink{background:var(--pink)}
-.c-grey-mid{background:var(--grey-mid)}
-.c-grey-soft{background:#C9C9C9}
-.c-red{background:var(--red)}
-
+.z-grow{background:var(--green)}
+.z-keep{background:var(--blue-dark)}
+.z-dev{background:var(--yellow)}
+.z-risk{background:var(--red)}
 .axis-hint{display:flex;justify-content:flex-end;font-size:12.5px;color:var(--grey-dark);margin-top:8px}
+.legend{display:flex;flex-wrap:wrap;gap:22px;margin-top:22px;padding-top:18px;border-top:1px solid var(--grey-light)}
+.legend .item{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--grey-dark);max-width:255px}
+.legend .sw{width:16px;height:16px;flex:none;margin-top:2px}
+.legend .item b{color:var(--black);font-weight:600;display:block;font-size:14px}
 
-/* ---------- detail cards ---------- */
-.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.card{background:#fff;border:1px solid var(--grey-light);display:flex;flex-direction:column}
-.card .topbar{height:6px}
-.card .body{padding:24px 26px 26px}
-.card .pos-line{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--grey-dark);margin-bottom:4px}
-.card h3{font-size:27px;font-weight:600;color:var(--black);line-height:1;margin-bottom:14px}
-.block{margin-top:14px}
-.block .lbl{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--red);margin-bottom:3px}
-.block p{font-size:15px;color:var(--grey-dark)}
-.actions{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
-.act{padding:14px 16px;font-size:14.5px;color:var(--grey-dark)}
-.act.ldg{background:var(--grey-bg);border-left:4px solid var(--red)}
-.act.mdw{background:var(--grey-bg);border-left:4px solid var(--blue-dark)}
-.act .who{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;display:block;color:var(--black)}
+/* ---------- positie-kaarten (detail) ---------- */
+.pcard{background:#fff;border:1px solid var(--grey-light);margin-bottom:24px;scroll-margin-top:20px}
+.pcard .topbar{height:6px}
+.pcard-head{padding:24px 28px 22px;border-bottom:1px solid var(--grey-light)}
+.pcard-head .pos-line{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--grey-dark);margin-bottom:4px}
+.pcard-head h3{font-size:28px;font-weight:600;color:var(--black);line-height:1;margin-bottom:12px}
+.pcard-head .betekenis{font-size:15.5px;color:var(--grey-dark);max-width:920px}
+.scn-label{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding:16px 28px 0}
+.scenarios{display:grid;grid-template-columns:repeat(3,1fr);padding:12px 28px 26px;gap:0}
+.scn{padding:0 22px;border-left:1px solid var(--grey-light)}
+.scn:first-child{padding-left:0;border-left:none}
+.scn:last-child{padding-right:0}
+.scn .num{font-size:12px;font-weight:700;color:var(--grey-mid);letter-spacing:.05em;text-transform:uppercase}
+.scn .scn-t{font-size:17px;font-weight:600;color:var(--black);line-height:1.15;margin:3px 0 5px}
+.scn .scn-d{font-size:14px;color:var(--grey-dark);margin-bottom:13px;font-style:italic}
+.scn ul{list-style:none}
+.scn li{font-size:14px;color:var(--black);position:relative;padding-left:18px;margin-bottom:8px;line-height:1.4}
+.scn li:before{content:"\25B8";color:var(--red);position:absolute;left:0;top:0;font-size:13px}
 
 /* ---------- footer ---------- */
-footer{background:var(--blue-dark);color:rgba(255,255,255,.82);padding:30px 0;font-size:14px;margin-top:0}
+footer{background:var(--blue-dark);color:rgba(255,255,255,.82);padding:30px 0;font-size:14px}
 footer strong{color:#fff;font-weight:600}
 
-@media(max-width:860px){
-  .axes,.cards,.actions{grid-template-columns:1fr}
-  .cell .nm{font-size:18px}
+@media(max-width:900px){
+  .axes{grid-template-columns:1fr}
   .level{grid-template-columns:1fr}
+  .cell .nm{font-size:18px}
+  .scenarios{grid-template-columns:1fr;gap:0}
+  .scn{padding:18px 0 0;border-left:none;border-top:1px solid var(--grey-light)}
+  .scn:first-child{padding-top:0;border-top:none}
 }
 @media print{
   body{background:#fff}
-  section{padding:24px 0;break-inside:avoid}
+  section{padding:24px 0}
   section.alt{background:#fff}
-  .card,.axis-card{break-inside:avoid}
+  .pcard,.axis-card{break-inside:avoid}
   header{padding:30px 0}
   .cell:hover{opacity:1}
 }
@@ -153,7 +124,7 @@ footer strong{color:#fff;font-weight:600}
   <div class="wrap">
     <div class="eyebrow">People Review</div>
     <h1>Het <strong>9-grid</strong></h1>
-    <p>Eén overzicht van de negen posities in de people review. Per positie lees je wanneer een medewerker daar terechtkomt (de combinatie van performance en potentieel) en wat dat betekent: wat jij als leidinggevende te doen hebt, en wat de medewerker te doen heeft.</p>
+    <p>Hulpmiddel voor jou als leidinggevende bij de people review. Per positie lees je wanneer een medewerker daar terechtkomt (de combinatie van performance en potentieel), wat dat betekent, en drie scenario's die kunnen spelen, elk met concrete acties waarmee jij de medewerker verder helpt.</p>
   </div>
 </header>
 
@@ -187,172 +158,182 @@ footer strong{color:#fff;font-weight:600}
   <div class="gridbox">
     <div class="y-axis">Potentieel &rarr;</div>
     <div class="cells">
-      <!-- rij: hoog potentieel -->
-      <a class="cell c-yellow dark" href="#ruwe-diamant"><span class="pos">Extra aandacht · Hoog potentieel</span><span class="nm">Ruwe Diamant</span><span class="arrow">Lees verder &rarr;</span></a>
-      <a class="cell c-green" href="#bestendige-professional"><span class="pos">Succesvol · Hoog potentieel</span><span class="nm">Bestendige Professional</span><span class="arrow">Lees verder &rarr;</span></a>
-      <a class="cell c-blue-dark" href="#super-ster"><span class="pos">Buitengewoon · Hoog potentieel</span><span class="nm">Super Ster</span><span class="arrow">Lees verder &rarr;</span></a>
-      <!-- rij: potentieel aanwezig -->
-      <a class="cell c-pink dark" href="#presteerder-in-ontwikkeling"><span class="pos">Extra aandacht · Potentieel aanwezig</span><span class="nm">Presteerder in Ontwikkeling</span><span class="arrow">Lees verder &rarr;</span></a>
-      <a class="cell c-grey-dark" href="#kundige-professional"><span class="pos">Succesvol · Potentieel aanwezig</span><span class="nm">Kundige Professional</span><span class="arrow">Lees verder &rarr;</span></a>
-      <a class="cell c-blue-light dark" href="#opkomende-ster"><span class="pos">Buitengewoon · Potentieel aanwezig</span><span class="nm">Opkomende Ster</span><span class="arrow">Lees verder &rarr;</span></a>
-      <!-- rij: potentieel bereikt -->
-      <a class="cell c-red" href="#laagpresteerder"><span class="pos">Extra aandacht · Potentieel bereikt</span><span class="nm">Laagpresteerder</span><span class="arrow">Lees verder &rarr;</span></a>
-      <a class="cell c-grey-soft dark" href="#solide-bijdrager"><span class="pos">Succesvol · Potentieel bereikt</span><span class="nm">Solide Bijdrager</span><span class="arrow">Lees verder &rarr;</span></a>
-      <a class="cell c-grey-mid" href="#impactvolle-bijdrager"><span class="pos">Buitengewoon · Potentieel bereikt</span><span class="nm">Impactvolle Bijdrager</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell z-dev dark" href="#ruwe-diamant"><span class="pos">Extra aandacht · Hoog potentieel</span><span class="nm">Ruwe Diamant</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell z-grow" href="#bestendige-professional"><span class="pos">Succesvol · Hoog potentieel</span><span class="nm">Bestendige Professional</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell z-grow" href="#super-ster"><span class="pos">Buitengewoon · Hoog potentieel</span><span class="nm">Super Ster</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell z-dev dark" href="#presteerder-in-ontwikkeling"><span class="pos">Extra aandacht · Potentieel aanwezig</span><span class="nm">Presteerder in Ontwikkeling</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell z-keep" href="#kundige-professional"><span class="pos">Succesvol · Potentieel aanwezig</span><span class="nm">Kundige Professional</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell z-grow" href="#opkomende-ster"><span class="pos">Buitengewoon · Potentieel aanwezig</span><span class="nm">Opkomende Ster</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell z-risk" href="#laagpresteerder"><span class="pos">Extra aandacht · Potentieel bereikt</span><span class="nm">Laagpresteerder</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell z-keep" href="#solide-bijdrager"><span class="pos">Succesvol · Potentieel bereikt</span><span class="nm">Solide Bijdrager</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell z-keep" href="#impactvolle-bijdrager"><span class="pos">Buitengewoon · Potentieel bereikt</span><span class="nm">Impactvolle Bijdrager</span><span class="arrow">Lees verder &rarr;</span></a>
     </div>
     <div class="x-axis">Performance &rarr;</div>
   </div>
   <div class="axis-hint">Links: extra aandacht nodig &nbsp;·&nbsp; rechts: buitengewoon succesvol</div>
+  <div class="legend">
+    <div class="item"><span class="sw z-grow"></span><span><b>Groei</b>Hoog presterend met groeipotentieel. Investeren, uitdagen en behouden.</span></div>
+    <div class="item"><span class="sw z-keep"></span><span><b>Benutten</b>Sterke, stabiele kracht zonder verdere doorgroei. Waarderen en optimaal inzetten.</span></div>
+    <div class="item"><span class="sw z-dev"></span><span><b>Ontwikkelen</b>Potentieel aanwezig, prestatie blijft achter. Gericht begeleiden.</span></div>
+    <div class="item"><span class="sw z-risk"></span><span><b>Risico</b>Onvoldoende prestatie zonder verbeter-vooruitzicht. Eerlijk en tijdig handelen.</span></div>
+  </div>
  </div>
 </section>
 
 <!-- DETAIL -->
 <section class="wrap">
   <div class="section-title">Toelichting per positie</div>
-  <p class="section-intro">Per positie: wanneer kom je hier te staan, wat het betekent, en de concrete acties voor leidinggevende en medewerker.</p>
-  <div class="cards">
+  <p class="section-intro">Per positie: wanneer je hier terechtkomt (de combinatie performance en potentieel), wat het betekent, en drie scenario's die kunnen spelen. Bij elk scenario staat wat er speelt en welke concrete acties jij kunt inzetten om de medewerker te helpen of te stimuleren.</p>
 
-    <!-- SUPER STER -->
-    <div class="card" id="super-ster">
-      <div class="topbar c-blue-dark"></div>
-      <div class="body">
-        <div class="pos-line">Buitengewoon succesvol &times; Hoog potentieel</div>
-        <h3>Super Ster</h3>
-        <div class="block"><div class="lbl">Wanneer kom je hier?</div><p>Presteert structureel boven verwachting én kan nog fors doorgroeien (twee schalen hoger). De combinatie van topprestatie en hoog potentieel.</p></div>
-        <div class="block"><div class="lbl">Wat betekent dit?</div><p>Verbetert en vernieuwt vanuit zichzelf. Je sterkste talent en belangrijk om te behouden; vertrekrisico is reëel als de uitdaging wegvalt.</p></div>
-        <div class="actions">
-          <div class="act ldg"><span class="who">Leidinggevende</span>Vragen stellen en ruimte geven om nieuwe ideeën te initiëren, ermee te experimenteren en kennis te delen. Maak prestaties zichtbaar en schets een loopbaanpad.</div>
-          <div class="act mdw"><span class="who">Medewerker</span>Blijf initiatief nemen, deel je kennis breed en zoek actief nieuwe uitdagingen. Denk na over je volgende stap.</div>
-        </div>
-      </div>
+  <!-- SUPER STER -->
+  <div class="pcard" id="super-ster">
+    <div class="topbar z-grow"></div>
+    <div class="pcard-head">
+      <div class="pos-line">Buitengewoon succesvol &times; Hoog potentieel</div>
+      <h3>Super Ster</h3>
+      <p class="betekenis">Hoog presterend met evident leiderschapspotentieel. Investeren en behouden is de opdracht.</p>
     </div>
-
-    <!-- BESTENDIGE PROFESSIONAL -->
-    <div class="card" id="bestendige-professional">
-      <div class="topbar c-green"></div>
-      <div class="body">
-        <div class="pos-line">Succesvol &times; Hoog potentieel</div>
-        <h3>Bestendige Professional</h3>
-        <div class="block"><div class="lbl">Wanneer kom je hier?</div><p>Realiseert de doelen consistent en heeft tegelijk hoog groeipotentieel, maar benut dat potentieel nog niet volledig.</p></div>
-        <div class="block"><div class="lbl">Wat betekent dit?</div><p>Hoge presteerder, loyaal en betrouwbaar. Risico: de eigen kracht wordt een valkuil bij verandering.</p></div>
-        <div class="actions">
-          <div class="act ldg"><span class="who">Leidinggevende</span>Stimuleer een open houding naar buiten om weerstand bij verandering te voorkomen. Bied nieuwe prikkels die het potentieel aanspreken.</div>
-          <div class="act mdw"><span class="who">Medewerker</span>Blijf openstaan voor verandering, zoek buiten je comfortzone en benut je groeipotentieel.</div>
-        </div>
-      </div>
+    <div class="scn-label">Mogelijke scenario's &amp; acties</div>
+    <div class="scenarios">
+      <div class="scn"><div class="num">Scenario 1</div><div class="scn-t">Klaar voor leidinggevende rol</div><div class="scn-d">Inhoudelijk al in de lead; tijd voor mensen-verantwoordelijkheid.</div><ul><li>Start een leadership development traject</li><li>Geef een eerste teamlead-rol als pilot</li><li>Koppel aan een senior mentor in de directie</li></ul></div>
+      <div class="scn"><div class="num">Scenario 2</div><div class="scn-t">Flight risk</div><div class="scn-d">Externe kansen liggen op de loer; vertrek is duur.</div><ul><li>Voer een retentiegesprek over loopbaan en uitdaging</li><li>Maak een concreet 12-maandsplan met zichtbare doorgroei</li><li>Bied zichtbaarheid in strategische initiatieven</li></ul></div>
+      <div class="scn"><div class="num">Scenario 3</div><div class="scn-t">Overbelasting</div><div class="scn-d">Wordt overal op ingezet; burn-out dreigt.</div><ul><li>Herverdeel werklast en schrap niet-kritische taken</li><li>Spreek grenzen af en bewaak deze actief</li><li>Bescherm rustmomenten (weekend, vakantie, avonden)</li></ul></div>
     </div>
-
-    <!-- RUWE DIAMANT -->
-    <div class="card" id="ruwe-diamant">
-      <div class="topbar c-yellow"></div>
-      <div class="body">
-        <div class="pos-line">Extra aandacht nodig &times; Hoog potentieel</div>
-        <h3>Ruwe Diamant</h3>
-        <div class="block"><div class="lbl">Wanneer kom je hier?</div><p>Komt binnen met hoge verwachtingen en hoog potentieel, maar de prestaties zijn nog onbekend of nog niet op niveau. Vaak een nieuwkomer.</p></div>
-        <div class="block"><div class="lbl">Wat betekent dit?</div><p>Veelbelovend, maar het moet zich nog bewijzen. Doorstroming naar een passende positie binnen maximaal twee jaar.</p></div>
-        <div class="actions">
-          <div class="act ldg"><span class="who">Leidinggevende</span>Maak verwachtingen manifest, houd het enthousiasme over de aanstelling vast en zorg voor stevige begeleiding en onboarding.</div>
-          <div class="act mdw"><span class="who">Medewerker</span>Maak de verwachtingen waar, vraag actief om feedback en laat zien wat je in huis hebt.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- OPKOMENDE STER -->
-    <div class="card" id="opkomende-ster">
-      <div class="topbar c-blue-light"></div>
-      <div class="body">
-        <div class="pos-line">Buitengewoon succesvol &times; Potentieel aanwezig</div>
-        <h3>Opkomende Ster</h3>
-        <div class="block"><div class="lbl">Wanneer kom je hier?</div><p>Presteert boven verwachting en kan zich verder ontwikkelen (één schaal hoger of een bredere rol). Nog te ontdekken groeiruimte.</p></div>
-        <div class="block"><div class="lbl">Wat betekent dit?</div><p>Succesvol in de bestaande context en pakt nieuwe inzichten op. De richtkeuze specialist versus breed wordt nu relevant.</p></div>
-        <div class="actions">
-          <div class="act ldg"><span class="who">Leidinggevende</span>Bied ruimte om aan te sluiten bij ideeën en initiatieven die het team verder brengen. Help richting kiezen en breid de rol uit.</div>
-          <div class="act mdw"><span class="who">Medewerker</span>Pak nieuwe inzichten op en denk na over je richting: wil je verdiepen of verbreden?</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- KUNDIGE PROFESSIONAL -->
-    <div class="card" id="kundige-professional">
-      <div class="topbar c-grey-dark"></div>
-      <div class="body">
-        <div class="pos-line">Succesvol &times; Potentieel aanwezig</div>
-        <h3>Kundige Professional</h3>
-        <div class="block"><div class="lbl">Wanneer kom je hier?</div><p>Functioneert conform verwachting met groeipotentieel dat aanwezig is, maar nog beperkt benut wordt.</p></div>
-        <div class="block"><div class="lbl">Wat betekent dit?</div><p>Een betrouwbare kracht in het team. Kan moeite hebben met verandering.</p></div>
-        <div class="actions">
-          <div class="act ldg"><span class="who">Leidinggevende</span>Neem actief mee in veranderingen. Lukt dat niet, ga dan bijtijds in gesprek over mobiliteit.</div>
-          <div class="act mdw"><span class="who">Medewerker</span>Blijf meebewegen met veranderingen en houd je vakkennis actueel.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PRESTEERDER IN ONTWIKKELING -->
-    <div class="card" id="presteerder-in-ontwikkeling">
-      <div class="topbar c-pink"></div>
-      <div class="body">
-        <div class="pos-line">Extra aandacht nodig &times; Potentieel aanwezig</div>
-        <h3>Presteerder in Ontwikkeling</h3>
-        <div class="block"><div class="lbl">Wanneer kom je hier?</div><p>Heeft aantoonbaar potentieel, maar de prestaties blijven achter bij wat verwacht mag worden.</p></div>
-        <div class="block"><div class="lbl">Wat betekent dit?</div><p>De capaciteiten blijven onbenut. Er is iets dat de prestatie in de weg zit.</p></div>
-        <div class="actions">
-          <div class="act ldg"><span class="who">Leidinggevende</span>Werk stapsgewijs aan prestatieverbetering via gerichte interventies, of concludeer dat de context niet past bij de behoefte van de medewerker.</div>
-          <div class="act mdw"><span class="who">Medewerker</span>Werk aan je prestaties, bespreek open wat in de weg zit en benut je capaciteiten.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- IMPACTVOLLE BIJDRAGER -->
-    <div class="card" id="impactvolle-bijdrager">
-      <div class="topbar c-grey-mid"></div>
-      <div class="body">
-        <div class="pos-line">Buitengewoon succesvol &times; Potentieel bereikt</div>
-        <h3>Impactvolle Bijdrager</h3>
-        <div class="block"><div class="lbl">Wanneer kom je hier?</div><p>Presteert boven verwachting, terwijl de ontwikkeling vooral binnen de huidige functie of op vergelijkbaar niveau ligt.</p></div>
-        <div class="block"><div class="lbl">Wat betekent dit?</div><p>Hoge bijdrage en het vermogen om veranderingen op te pakken. Geen drang naar een formele leiderschapsrol; de kracht zit in diepe expertise en impact binnen het eigen domein.</p></div>
-        <div class="actions">
-          <div class="act ldg"><span class="who">Leidinggevende</span>Breng in een coördinerende of leidende positie als voorbeeld voor nieuwe ontwikkelingen in het team. Erken en benut de expertise.</div>
-          <div class="act mdw"><span class="who">Medewerker</span>Zet je expertise in, neem een voorbeeldrol en deel je kennis met het team.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SOLIDE BIJDRAGER -->
-    <div class="card" id="solide-bijdrager">
-      <div class="topbar c-grey-soft"></div>
-      <div class="body">
-        <div class="pos-line">Succesvol &times; Potentieel bereikt</div>
-        <h3>Solide Bijdrager</h3>
-        <div class="block"><div class="lbl">Wanneer kom je hier?</div><p>Realiseert de doelen, met ontwikkeling die zich vooral op een vergelijkbaar niveau afspeelt.</p></div>
-        <div class="block"><div class="lbl">Wat betekent dit?</div><p>Volgt de beweging van het team. Ontwikkelt zich als de nadruk daarop ligt, maar valt stil zonder sturing.</p></div>
-        <div class="actions">
-          <div class="act ldg"><span class="who">Leidinggevende</span>Geef richting aan het team als geheel en bied duidelijke kaders waarbinnen de bijdrage tot zijn recht komt.</div>
-          <div class="act mdw"><span class="who">Medewerker</span>Blijf bijdragen, vraag om richting en pak ontwikkeling op zodra die geboden wordt.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- LAAGPRESTEERDER -->
-    <div class="card" id="laagpresteerder">
-      <div class="topbar c-red"></div>
-      <div class="body">
-        <div class="pos-line">Extra aandacht nodig &times; Potentieel bereikt</div>
-        <h3>Laagpresteerder</h3>
-        <div class="block"><div class="lbl">Wanneer kom je hier?</div><p>Onvoldoende bijdrage en geen reële verwachting van verbetering binnen de huidige situatie.</p></div>
-        <div class="block"><div class="lbl">Wat betekent dit?</div><p>De risicozone van het grid. Hier is een duidelijke keuze nodig.</p></div>
-        <div class="actions">
-          <div class="act ldg"><span class="who">Leidinggevende</span>Begeleid naar een andere functie of naar uitstroom uit de organisatie. Maak een helder traject met concrete grenzen.</div>
-          <div class="act mdw"><span class="who">Medewerker</span>Maak afspraken concreet en toon verbetering, of oriënteer je actief op een functie die beter past.</div>
-        </div>
-      </div>
-    </div>
-
   </div>
+
+  <!-- BESTENDIGE PROFESSIONAL -->
+  <div class="pcard" id="bestendige-professional">
+    <div class="topbar z-grow"></div>
+    <div class="pcard-head">
+      <div class="pos-line">Succesvol &times; Hoog potentieel</div>
+      <h3>Bestendige Professional</h3>
+      <p class="betekenis">Solide prestaties met duidelijk groeipotentieel. Klaar voor een volgende stap, mits die binnen redelijke termijn wordt geboden.</p>
+    </div>
+    <div class="scn-label">Mogelijke scenario's &amp; acties</div>
+    <div class="scenarios">
+      <div class="scn"><div class="num">Scenario 1</div><div class="scn-t">Klaar voor volgende stap</div><div class="scn-d">Rol wordt comfortabel beheerst; groei dreigt te stagneren.</div><ul><li>Bespreek doorgroei-ambitie in een loopbaangesprek</li><li>Bied stretch-opdrachten of een project-lead positie</li><li>Werk een opvolgingsscenario uit voor 6 tot 12 maanden</li></ul></div>
+      <div class="scn"><div class="num">Scenario 2</div><div class="scn-t">Wacht op doorgroei</div><div class="scn-d">Geen intern perspectief zichtbaar; kans op demotivatie.</div><ul><li>Wees eerlijk over de tijdlijn en realistische opties</li><li>Onderzoek zijwaartse verrijking (nieuwe skill, tijdelijke opdracht)</li><li>Versterk erkenning en zichtbaarheid in de huidige rol</li></ul></div>
+      <div class="scn"><div class="num">Scenario 3</div><div class="scn-t">Nog niet in de spotlight</div><div class="scn-d">Doet goed werk maar is buiten het team onbekend.</div><ul><li>Laat presenteren aan directie of stakeholders</li><li>Zet in op een cross-team initiatief</li><li>Nomineer voor een talentprogramma</li></ul></div>
+    </div>
+  </div>
+
+  <!-- RUWE DIAMANT -->
+  <div class="pcard" id="ruwe-diamant">
+    <div class="topbar z-dev"></div>
+    <div class="pcard-head">
+      <div class="pos-line">Extra aandacht nodig &times; Hoog potentieel</div>
+      <h3>Ruwe Diamant</h3>
+      <p class="betekenis">Hoge verwachtingen bij aantreden; prestaties nog niet waargemaakt. De vraag is hoe je de diamant kunt slijpen voordat hij dof wordt.</p>
+    </div>
+    <div class="scn-label">Mogelijke scenario's &amp; acties</div>
+    <div class="scenarios">
+      <div class="scn"><div class="num">Scenario 1</div><div class="scn-t">Nieuw ingestroomd</div><div class="scn-d">Medewerker is net binnen; onboarding en context moeten nog landen.</div><ul><li>Maak verwachtingen expliciet in de eerste 90 dagen</li><li>Koppel aan een ervaren buddy of mentor</li><li>Plan 30/60/90-dagen check-ins met concrete doelen</li></ul></div>
+      <div class="scn"><div class="num">Scenario 2</div><div class="scn-t">Rol-mismatch</div><div class="scn-d">Talent is er, maar de huidige rol benut het onvoldoende.</div><ul><li>Onderzoek waar energie en resultaat zichtbaar zijn</li><li>Verken een herontwerp van de rol of een andere positie intern</li><li>Zet een tijdelijke proef in een ander team in</li></ul></div>
+      <div class="scn"><div class="num">Scenario 3</div><div class="scn-t">Persoonlijke belemmering</div><div class="scn-d">Privé, gezondheid of motivatie houdt de prestatie tegen.</div><ul><li>Voer een open, oordeelvrij gesprek over wat speelt</li><li>Schakel de bedrijfsarts bij langdurige situaties</li><li>Maak tijdelijke afspraken over taken en check-ins</li></ul></div>
+    </div>
+  </div>
+
+  <!-- OPKOMENDE STER -->
+  <div class="pcard" id="opkomende-ster">
+    <div class="topbar z-grow"></div>
+    <div class="pcard-head">
+      <div class="pos-line">Buitengewoon succesvol &times; Potentieel aanwezig</div>
+      <h3>Opkomende Ster</h3>
+      <p class="betekenis">Hoog presteerder met nog te ontdekken groeiruimte. De richtkeuze specialist versus breed wordt nu relevant.</p>
+    </div>
+    <div class="scn-label">Mogelijke scenario's &amp; acties</div>
+    <div class="scenarios">
+      <div class="scn"><div class="num">Scenario 1</div><div class="scn-t">Klaar om rol uit te breiden</div><div class="scn-d">Huidige scope wordt te klein.</div><ul><li>Verbreed de verantwoordelijkheid met een nieuw domein of groter dossier</li><li>Laat deelnemen aan een strategisch initiatief</li><li>Maak de uitbreiding formeel zichtbaar in het functieprofiel</li></ul></div>
+      <div class="scn"><div class="num">Scenario 2</div><div class="scn-t">Specialist- of brede rol</div><div class="scn-d">Richtkeuze nodig: diepte-expert of breed inzetbaar.</div><ul><li>Bespreek voorkeuren en drijfveren in een loopbaangesprek</li><li>Laat proeven aan beide sporen via projectvariatie</li><li>Maak samen een keuze binnen 6 tot 12 maanden</li></ul></div>
+      <div class="scn"><div class="num">Scenario 3</div><div class="scn-t">Erkenning nodig voor behoud</div><div class="scn-d">Weinig tastbare waardering kan het engagement doen dalen.</div><ul><li>Geef zichtbare erkenning (team, management, beloning)</li><li>Zet het groeipad op papier met concrete stappen</li><li>Betrek bij een talentprogramma of hi-po-pool</li></ul></div>
+    </div>
+  </div>
+
+  <!-- KUNDIGE PROFESSIONAL -->
+  <div class="pcard" id="kundige-professional">
+    <div class="topbar z-keep"></div>
+    <div class="pcard-head">
+      <div class="pos-line">Succesvol &times; Potentieel aanwezig</div>
+      <h3>Kundige Professional</h3>
+      <p class="betekenis">De ruggengraat van elk team: betrouwbaar en vakbekwaam. Behoud en activering zijn hier belangrijker dan promotie.</p>
+    </div>
+    <div class="scn-label">Mogelijke scenario's &amp; acties</div>
+    <div class="scenarios">
+      <div class="scn"><div class="num">Scenario 1</div><div class="scn-t">Stabiele hoeksteen</div><div class="scn-d">Levert consistent werk; het team bouwt op hem of haar.</div><ul><li>Waardeer hardop en zichtbaar voor het team</li><li>Betrek actief bij teambeslissingen</li><li>Voer minimaal jaarlijks een loopbaangesprek voor retentie</li></ul></div>
+      <div class="scn"><div class="num">Scenario 2</div><div class="scn-t">Kan nog op deelvlakken groeien</div><div class="scn-d">Brede basis, nog ruimte voor verdieping of verbreding.</div><ul><li>Bied een verdiepings- of certificeringstraject aan</li><li>Geef een nieuw dossier of extra verantwoordelijkheid</li><li>Plan een jaarlijks ontwikkelmoment</li></ul></div>
+      <div class="scn"><div class="num">Scenario 3</div><div class="scn-t">Risico op stilstand</div><div class="scn-d">Zonder uitdaging kan het engagement dalen.</div><ul><li>Roteer taken of projectvormen binnen het team</li><li>Koppel aan een nieuwe samenwerking of werkgroep</li><li>Vraag expliciet om ideeën en initiatief</li></ul></div>
+    </div>
+  </div>
+
+  <!-- PRESTEERDER IN ONTWIKKELING -->
+  <div class="pcard" id="presteerder-in-ontwikkeling">
+    <div class="topbar z-dev"></div>
+    <div class="pcard-head">
+      <div class="pos-line">Extra aandacht nodig &times; Potentieel aanwezig</div>
+      <h3>Presteerder in Ontwikkeling</h3>
+      <p class="betekenis">Potentieel is zichtbaar, maar de prestaties blijven achter. Met gerichte interventie kan de prestatie stijgen; zonder actie stagneert het.</p>
+    </div>
+    <div class="scn-label">Mogelijke scenario's &amp; acties</div>
+    <div class="scenarios">
+      <div class="scn"><div class="num">Scenario 1</div><div class="scn-t">Skills-gap</div><div class="scn-d">Bepaalde vaardigheden zijn nog niet op niveau.</div><ul><li>Maak een concreet ontwikkelplan met meetbare mijlpalen</li><li>Zet opleiding, training of on-the-job coaching in</li><li>Monitor de voortgang in een maandelijkse 1-op-1</li></ul></div>
+      <div class="scn"><div class="num">Scenario 2</div><div class="scn-t">Context-mismatch</div><div class="scn-d">Persoon past niet in de huidige rol of teamdynamiek.</div><ul><li>Bespreek open welke context beter zou passen</li><li>Onderzoek interne mobiliteit naar een passender rol</li><li>Stel een proef-overstap voor met het ontvangende team</li></ul></div>
+      <div class="scn"><div class="num">Scenario 3</div><div class="scn-t">Motivatie- of privésituatie</div><div class="scn-d">Externe factoren beperken de prestatie.</div><ul><li>Toon begrip en creëer ruimte voor herstel</li><li>Schakel HR of de bedrijfsarts bij langdurige situaties</li><li>Maak tijdelijke aanpassingen in taken en uren</li></ul></div>
+    </div>
+  </div>
+
+  <!-- IMPACTVOLLE BIJDRAGER -->
+  <div class="pcard" id="impactvolle-bijdrager">
+    <div class="topbar z-keep"></div>
+    <div class="pcard-head">
+      <div class="pos-line">Buitengewoon succesvol &times; Potentieel bereikt</div>
+      <h3>Impactvolle Bijdrager</h3>
+      <p class="betekenis">Hoog presteerder zonder drang naar een formele leiderschapsrol. De kracht zit in diepe expertise en impact binnen het eigen domein.</p>
+    </div>
+    <div class="scn-label">Mogelijke scenario's &amp; acties</div>
+    <div class="scenarios">
+      <div class="scn"><div class="num">Scenario 1</div><div class="scn-t">Expert-blijver</div><div class="scn-d">Geen wens tot een leidinggevende rol, wel tot diepere impact.</div><ul><li>Bied een expert-track met senior-erkenning</li><li>Geef ruimte voor strategische thema's of een vaktrots-rol</li><li>Beloon de expertise zichtbaar</li></ul></div>
+      <div class="scn"><div class="num">Scenario 2</div><div class="scn-t">Mentor- of coach-rol</div><div class="scn-d">Kan anderen laten groeien zonder zelf leiding te geven.</div><ul><li>Formaliseer de mentor- of coach-rol in de functiebeschrijving</li><li>Koppel aan 1 of 2 talenten uit de hi-po-pool</li><li>Creëer hier expliciet tijd voor in de werkweek</li></ul></div>
+      <div class="scn"><div class="num">Scenario 3</div><div class="scn-t">Uitputtingsrisico</div><div class="scn-d">Hoge verwachtingen en continue inzet kunnen uitputten.</div><ul><li>Bewaak de werkdruk en spreek grenzen af</li><li>Herbeoordeel de scope jaarlijks</li><li>Plan herstelperiodes actief</li></ul></div>
+    </div>
+  </div>
+
+  <!-- SOLIDE BIJDRAGER -->
+  <div class="pcard" id="solide-bijdrager">
+    <div class="topbar z-keep"></div>
+    <div class="pcard-head">
+      <div class="pos-line">Succesvol &times; Potentieel bereikt</div>
+      <h3>Solide Bijdrager</h3>
+      <p class="betekenis">Levert al langere tijd stabiel werk. Waardevol voor continuïteit; let op de kwetsbaarheid bij verandering.</p>
+    </div>
+    <div class="scn-label">Mogelijke scenario's &amp; acties</div>
+    <div class="scenarios">
+      <div class="scn"><div class="num">Scenario 1</div><div class="scn-t">Stabiele hoeksteen</div><div class="scn-d">Betrouwbaar en loyaal; draagt het team.</div><ul><li>Toon expliciete waardering (intern en richting de omgeving)</li><li>Zet in op behoud via erkenning in plaats van promotie</li><li>Bescherm tegen verstoringen die de expertise wegjagen</li></ul></div>
+      <div class="scn"><div class="num">Scenario 2</div><div class="scn-t">Kwetsbaar bij reorganisatie</div><div class="scn-d">Vaardigheden sluiten niet meer volledig aan op de veranderende context.</div><ul><li>Breng het risico in kaart en bespreek het open</li><li>Bied omscholing of bredere inzetmogelijkheden</li><li>Maak een transitieplan met een tijdlijn</li></ul></div>
+      <div class="scn"><div class="num">Scenario 3</div><div class="scn-t">Onmisbaar in de operatie</div><div class="scn-d">Heeft kritieke kennis; afwezigheid is een risico.</div><ul><li>Zorg voor kennisoverdracht naar het team (documentatie)</li><li>Bouw een tweede aanspreekpunt op voor kritieke dossiers</li><li>Spreek opvolging af voor de kerntaken</li></ul></div>
+    </div>
+  </div>
+
+  <!-- LAAGPRESTEERDER -->
+  <div class="pcard" id="laagpresteerder">
+    <div class="topbar z-risk"></div>
+    <div class="pcard-head">
+      <div class="pos-line">Extra aandacht nodig &times; Potentieel bereikt</div>
+      <h3>Laagpresteerder</h3>
+      <p class="betekenis">Onvoldoende prestatie zonder reëel verbeter-vooruitzicht. Snel en eerlijk handelen voorkomt verdere schade aan medewerker en team.</p>
+    </div>
+    <div class="scn-label">Mogelijke scenario's &amp; acties</div>
+    <div class="scenarios">
+      <div class="scn"><div class="num">Scenario 1</div><div class="scn-t">Langdurige rol-mismatch</div><div class="scn-d">Rol past al langere tijd niet; geen zicht op verbetering.</div><ul><li>Voer een eerlijk gesprek over het toekomstperspectief</li><li>Start een outplacement- of intern mobiliteitstraject</li><li>Spreek een concrete deadline af (bijvoorbeeld 3 maanden)</li></ul></div>
+      <div class="scn"><div class="num">Scenario 2</div><div class="scn-t">Performance-issue met oorzaak</div><div class="scn-d">Gezondheid, privé of motivatie speelt een duidelijke rol.</div><ul><li>Schakel de bedrijfsarts of vertrouwenspersoon</li><li>Maak afspraken over herstel met vaste check-ins</li><li>Herbeoordeel na 3 tot 6 maanden</li></ul></div>
+      <div class="scn"><div class="num">Scenario 3</div><div class="scn-t">Afscheid onvermijdelijk</div><div class="scn-d">Eerdere interventies hebben niet geholpen.</div><ul><li>Volg de officiële procedure (verbetertraject of beëindiging) met HR</li><li>Wees duidelijk en respectvol in de communicatie</li><li>Bescherm het teammoraal via transparantie</li></ul></div>
+    </div>
+  </div>
+
 </section>
 
 <footer>
   <div class="wrap">
-    <strong>People Review · 9-grid</strong> &nbsp;—&nbsp; performance &times; potentieel. Hulpmiddel voor de people review; de positie is altijd een startpunt voor het gesprek, geen eindoordeel.
+    <strong>People Review · 9-grid</strong> &nbsp;—&nbsp; performance &times; potentieel. Hulpmiddel voor de leidinggevende; de positie is altijd een startpunt voor het gesprek, geen eindoordeel.
   </div>
 </footer>
 
