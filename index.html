@@ -6,209 +6,131 @@
 <title>People Review · Het 9-grid</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --green-900:#003520;
-  --green-800:#004d27;
-  --green-700:#006131;
-  --green-600:#00763c;
-  --green-500:#00853e;
-  --lime:#a8ec58;
-  --lime-soft:#e8f9cf;
-  --amber:#b7791f;
-  --amber-soft:#fbeccb;
-  --red:#b3261e;
-  --red-soft:#f7d9d6;
-  --ink:#1a2b22;
-  --ink-soft:#46564d;
-  --line:#dfe6e1;
-  --paper:#ffffff;
-  --bg:#f4f7f3;
-  --font-body:'Source Sans 3',system-ui,sans-serif;
-  --font-display:'Barlow Condensed',system-ui,sans-serif;
+  --red:#E52329;
+  --red-dark:#B81B20;
+  --blue-dark:#213A8F;
+  --blue-light:#41C0F0;
+  --yellow:#FBB900;
+  --green:#00853E;
+  --pink:#F087B6;
+  --black:#000;
+  --grey-dark:#5F5F5F;
+  --grey-mid:#999999;
+  --grey-light:#DDDDDD;
+  --grey-bg:#F5F5F5;
+  --font:'Barlow','Calibri','Segoe UI',Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{
-  font-family:var(--font-body);
-  color:var(--ink);
-  background:var(--bg);
-  line-height:1.55;
+  font-family:var(--font);
+  font-weight:400;
+  color:var(--black);
+  background:#fff;
+  line-height:1.5;
   -webkit-font-smoothing:antialiased;
 }
-.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
 
-/* ---------- header ---------- */
-header{
-  background:linear-gradient(135deg,var(--green-900),var(--green-700));
-  color:#fff;
-  padding:54px 0 48px;
-}
+/* ---------- header (rode stamp) ---------- */
+header{background:var(--red);color:#fff;padding:50px 0 44px}
 header .eyebrow{
-  font-family:var(--font-display);
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  font-weight:700;
-  font-size:15px;
-  color:var(--lime);
+  font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.9);
 }
 header h1{
-  font-family:var(--font-display);
-  text-transform:uppercase;
-  letter-spacing:.01em;
-  font-weight:800;
-  font-size:clamp(38px,6vw,62px);
-  line-height:.98;
-  margin:10px 0 16px;
+  font-weight:300;font-size:clamp(40px,6vw,64px);line-height:1.05;
+  margin:8px 0 16px;letter-spacing:-.01em;
 }
-header p{max-width:760px;font-size:18px;color:rgba(255,255,255,.9)}
+header h1 strong{font-weight:600}
+header p{max-width:780px;font-size:18px;color:rgba(255,255,255,.92);font-weight:400}
 
 /* ---------- sections ---------- */
-section{padding:46px 0}
+section{padding:48px 0}
+section.alt{background:var(--grey-bg)}
 .section-title{
-  font-family:var(--font-display);
-  text-transform:uppercase;
-  letter-spacing:.04em;
-  font-weight:700;
-  font-size:30px;
-  color:var(--green-700);
-  margin-bottom:6px;
+  font-size:32px;font-weight:600;color:var(--red);line-height:1.2;margin-bottom:6px;
 }
-.section-intro{max-width:820px;color:var(--ink-soft);margin-bottom:26px;font-size:16.5px}
+.section-intro{max-width:840px;color:var(--grey-dark);margin-bottom:28px;font-size:17px}
+.section-intro strong{color:var(--black);font-weight:600}
 
 /* ---------- assen ---------- */
 .axes{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.axis-card{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:24px 26px;
-}
-.axis-card h3{
-  font-family:var(--font-display);
-  text-transform:uppercase;
-  letter-spacing:.05em;
-  font-size:22px;
-  color:var(--green-700);
-  margin-bottom:4px;
-}
-.axis-card .lead{color:var(--ink-soft);font-size:15px;margin-bottom:16px}
-.level{padding:13px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:185px 1fr;gap:14px}
+.axis-card{background:#fff;border:1px solid var(--grey-light);padding:26px 28px}
+.axis-card h3{font-size:24px;font-weight:600;color:var(--black);margin-bottom:2px}
+.axis-card .lead{color:var(--grey-dark);font-size:15px;margin-bottom:18px}
+.level{padding:14px 0;border-top:1px solid var(--grey-light);display:grid;grid-template-columns:190px 1fr;gap:16px}
 .level:first-of-type{border-top:none}
-.level .tag{
-  font-weight:700;
-  font-size:15px;
-  display:flex;align-items:flex-start;gap:9px;
-}
-.dot{width:11px;height:11px;border-radius:50%;margin-top:6px;flex:none}
-.dot.hi{background:var(--green-500)}
-.dot.mid{background:var(--amber)}
-.dot.lo{background:#9aa6a0}
-.level p{font-size:14.5px;color:var(--ink-soft)}
+.level .tag{font-weight:600;font-size:15px;display:flex;align-items:flex-start;gap:10px}
+.bar3{width:5px;align-self:stretch;flex:none}
+.bar3.hi{background:var(--green)}
+.bar3.mid{background:var(--yellow)}
+.bar3.lo{background:var(--red)}
+.level p{font-size:14.5px;color:var(--grey-dark)}
 
 /* ---------- de grid ---------- */
 .gridbox{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:30px;
-  display:grid;
-  grid-template-columns:46px 1fr;
-  grid-template-rows:1fr 46px;
-  gap:14px;
+  background:#fff;border:1px solid var(--grey-light);padding:30px;
+  display:grid;grid-template-columns:40px 1fr;grid-template-rows:1fr 40px;gap:14px;
 }
 .y-axis{
-  grid-column:1;grid-row:1;
-  writing-mode:vertical-rl;transform:rotate(180deg);
-  text-align:center;
-  font-family:var(--font-display);text-transform:uppercase;letter-spacing:.12em;
-  font-weight:700;color:var(--green-700);font-size:16px;
+  grid-column:1;grid-row:1;writing-mode:vertical-rl;transform:rotate(180deg);
+  text-align:center;font-weight:600;color:var(--red);font-size:15px;letter-spacing:.06em;text-transform:uppercase;
   display:flex;align-items:center;justify-content:center;
 }
 .x-axis{
-  grid-column:2;grid-row:2;
-  text-align:center;
-  font-family:var(--font-display);text-transform:uppercase;letter-spacing:.12em;
-  font-weight:700;color:var(--green-700);font-size:16px;
-  display:flex;align-items:center;justify-content:center;
+  grid-column:2;grid-row:2;text-align:center;font-weight:600;color:var(--red);font-size:15px;
+  letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;
 }
 .cells{
-  grid-column:2;grid-row:1;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  grid-template-rows:repeat(3,1fr);
-  gap:12px;
+  grid-column:2;grid-row:1;display:grid;
+  grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:10px;
 }
 .cell{
-  border-radius:12px;
-  padding:16px 16px 15px;
-  min-height:118px;
-  color:#fff;
+  padding:16px;min-height:120px;color:#fff;
   display:flex;flex-direction:column;justify-content:space-between;
-  text-decoration:none;
-  transition:transform .12s ease,box-shadow .12s ease;
+  text-decoration:none;border:1px solid transparent;transition:opacity .12s ease;
 }
-.cell:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,40,20,.18)}
-.cell .pos{font-size:11.5px;letter-spacing:.02em;opacity:.85;font-weight:600}
-.cell .nm{
-  font-family:var(--font-display);text-transform:uppercase;letter-spacing:.02em;
-  font-weight:700;font-size:21px;line-height:.98;
-}
-.cell .arrow{font-size:13px;opacity:.8;font-weight:600}
-.z-top{background:linear-gradient(135deg,var(--green-700),var(--green-500))}
-.z-good{background:linear-gradient(135deg,var(--green-600),#2a9d5a)}
-.z-core{background:linear-gradient(135deg,#3f6b55,#5a8a72)}
-.z-dev{background:linear-gradient(135deg,#a86d12,#c9912e)}
-.z-risk{background:linear-gradient(135deg,#9e221b,#c0392f)}
-.axis-hint{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-soft);margin-top:6px;padding:0 4px}
+.cell:hover{opacity:.88;color:#fff}
+.cell .pos{font-size:11.5px;font-weight:600;opacity:.92}
+.cell .nm{font-size:22px;font-weight:600;line-height:1.05}
+.cell .arrow{font-size:13px;font-weight:500;opacity:.9}
+.cell.dark{color:var(--black)}
+.cell.dark:hover{color:var(--black)}
+
+.c-blue-dark{background:var(--blue-dark)}
+.c-green{background:var(--green)}
+.c-yellow{background:var(--yellow)}
+.c-blue-light{background:var(--blue-light)}
+.c-grey-dark{background:var(--grey-dark)}
+.c-pink{background:var(--pink)}
+.c-grey-mid{background:var(--grey-mid)}
+.c-grey-soft{background:#C9C9C9}
+.c-red{background:var(--red)}
+
+.axis-hint{display:flex;justify-content:flex-end;font-size:12.5px;color:var(--grey-dark);margin-top:8px}
 
 /* ---------- detail cards ---------- */
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.card{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:14px;
-  overflow:hidden;
-  display:flex;flex-direction:column;
-}
-.card .bar{height:7px}
-.bar.z-top{background:var(--green-500)}
-.bar.z-good{background:#2a9d5a}
-.bar.z-core{background:#5a8a72}
-.bar.z-dev{background:#c9912e}
-.bar.z-risk{background:#c0392f}
-.card .body{padding:22px 24px 24px}
-.card .pos-line{
-  font-family:var(--font-display);text-transform:uppercase;letter-spacing:.06em;
-  font-size:12.5px;font-weight:700;color:var(--ink-soft);margin-bottom:3px;
-}
-.card h3{
-  font-family:var(--font-display);text-transform:uppercase;letter-spacing:.01em;
-  font-weight:800;font-size:26px;color:var(--green-700);line-height:1;margin-bottom:14px;
-}
+.card{background:#fff;border:1px solid var(--grey-light);display:flex;flex-direction:column}
+.card .topbar{height:6px}
+.card .body{padding:24px 26px 26px}
+.card .pos-line{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--grey-dark);margin-bottom:4px}
+.card h3{font-size:27px;font-weight:600;color:var(--black);line-height:1;margin-bottom:14px}
 .block{margin-top:14px}
-.block .lbl{
-  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
-  color:var(--green-600);margin-bottom:3px;
-}
-.block p{font-size:15px;color:var(--ink)}
-.actions{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
-.act{border-radius:10px;padding:13px 15px;font-size:14.5px}
-.act.ldg{background:var(--lime-soft);border:1px solid #cfe9a8}
-.act.mdw{background:#eef3ef;border:1px solid var(--line)}
-.act .who{
-  font-family:var(--font-display);text-transform:uppercase;letter-spacing:.06em;
-  font-weight:700;font-size:13px;margin-bottom:4px;display:block;
-}
-.act.ldg .who{color:var(--green-700)}
-.act.mdw .who{color:var(--ink-soft)}
+.block .lbl{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--red);margin-bottom:3px}
+.block p{font-size:15px;color:var(--grey-dark)}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.act{padding:14px 16px;font-size:14.5px;color:var(--grey-dark)}
+.act.ldg{background:var(--grey-bg);border-left:4px solid var(--red)}
+.act.mdw{background:var(--grey-bg);border-left:4px solid var(--blue-dark)}
+.act .who{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;display:block;color:var(--black)}
 
 /* ---------- footer ---------- */
-footer{
-  background:var(--green-900);color:rgba(255,255,255,.78);
-  padding:30px 0;font-size:14px;margin-top:30px;
-}
-footer strong{color:#fff}
+footer{background:var(--blue-dark);color:rgba(255,255,255,.82);padding:30px 0;font-size:14px;margin-top:0}
+footer strong{color:#fff;font-weight:600}
 
 @media(max-width:860px){
   .axes,.cards,.actions{grid-template-columns:1fr}
@@ -217,10 +139,11 @@ footer strong{color:#fff}
 }
 @media print{
   body{background:#fff}
-  .cell:hover{transform:none;box-shadow:none}
-  section{padding:22px 0;break-inside:avoid}
-  .card{break-inside:avoid}
+  section{padding:24px 0;break-inside:avoid}
+  section.alt{background:#fff}
+  .card,.axis-card{break-inside:avoid}
   header{padding:30px 0}
+  .cell:hover{opacity:1}
 }
 </style>
 </head>
@@ -229,7 +152,7 @@ footer strong{color:#fff}
 <header>
   <div class="wrap">
     <div class="eyebrow">People Review</div>
-    <h1>Het 9-grid</h1>
+    <h1>Het <strong>9-grid</strong></h1>
     <p>Eén overzicht van de negen posities in de people review. Per positie lees je wanneer een medewerker daar terechtkomt (de combinatie van performance en potentieel) en wat dat betekent: wat jij als leidinggevende te doen hebt, en wat de medewerker te doen heeft.</p>
   </div>
 </header>
@@ -242,43 +165,45 @@ footer strong{color:#fff}
     <div class="axis-card">
       <h3>Performance</h3>
       <div class="lead">Horizontale as · de prestatie van het afgelopen jaar.</div>
-      <div class="level"><span class="tag"><span class="dot hi"></span>Buitengewoon succesvol</span><p>Presteert structureel boven de afgesproken doelen, functie en verwachtingen, binnen én buiten het team. Heeft een buitengewone ontwikkeling doorgemaakt of een grote bijdrage geleverd.</p></div>
-      <div class="level"><span class="tag"><span class="dot mid"></span>Succesvol</span><p>De doelen zijn gerealiseerd, van individuele prestaties tot teaminspanning en klanttevredenheid. De collega zit goed op zijn of haar plek.</p></div>
-      <div class="level"><span class="tag"><span class="dot lo"></span>Extra aandacht nodig</span><p>Heeft extra aandacht nodig om de afgesproken doelstellingen (resultaat, gedrag, ontwikkeling) te halen en de functie volwaardig uit te oefenen.</p></div>
+      <div class="level"><span class="tag"><span class="bar3 hi"></span>Buitengewoon succesvol</span><p>Presteert structureel boven de afgesproken doelen, functie en verwachtingen, binnen én buiten het team. Heeft een buitengewone ontwikkeling doorgemaakt of een grote bijdrage geleverd.</p></div>
+      <div class="level"><span class="tag"><span class="bar3 mid"></span>Succesvol</span><p>De doelen zijn gerealiseerd, van individuele prestaties tot teaminspanning en klanttevredenheid. De collega zit goed op zijn of haar plek.</p></div>
+      <div class="level"><span class="tag"><span class="bar3 lo"></span>Extra aandacht nodig</span><p>Heeft extra aandacht nodig om de afgesproken doelstellingen (resultaat, gedrag, ontwikkeling) te halen en de functie volwaardig uit te oefenen.</p></div>
     </div>
     <div class="axis-card">
       <h3>Potentieel</h3>
       <div class="lead">Verticale as · de groeirichting naar de toekomst.</div>
-      <div class="level"><span class="tag"><span class="dot hi"></span>Hoog potentieel</span><p>Veel groeipotentieel; kan doorgroeien naar een hogere functie (twee schalen hoger) in het eigen of een ander functioneel gebied.</p></div>
-      <div class="level"><span class="tag"><span class="dot mid"></span>Potentieel aanwezig</span><p>Kan zich ontwikkelen naar één schaal hoger of een bredere rol binnen het eigen gebied, of dezelfde schaal in een ander functioneel gebied.</p></div>
-      <div class="level"><span class="tag"><span class="dot lo"></span>Potentieel bereikt</span><p>Ontwikkeling wordt vooral verwacht binnen de eigen functie of een andere functie op vergelijkbaar niveau in het eigen functioneel gebied.</p></div>
+      <div class="level"><span class="tag"><span class="bar3 hi"></span>Hoog potentieel</span><p>Veel groeipotentieel; kan doorgroeien naar een hogere functie (twee schalen hoger) in het eigen of een ander functioneel gebied.</p></div>
+      <div class="level"><span class="tag"><span class="bar3 mid"></span>Potentieel aanwezig</span><p>Kan zich ontwikkelen naar één schaal hoger of een bredere rol binnen het eigen gebied, of dezelfde schaal in een ander functioneel gebied.</p></div>
+      <div class="level"><span class="tag"><span class="bar3 lo"></span>Potentieel bereikt</span><p>Ontwikkeling wordt vooral verwacht binnen de eigen functie of een andere functie op vergelijkbaar niveau in het eigen functioneel gebied.</p></div>
     </div>
   </div>
 </section>
 
 <!-- DE GRID -->
-<section class="wrap">
+<section class="alt">
+ <div class="wrap">
   <div class="section-title">Het 9-grid in één oogopslag</div>
   <p class="section-intro">Performance loopt van links (extra aandacht nodig) naar rechts (buitengewoon succesvol). Potentieel loopt van onder (bereikt) naar boven (hoog). Klik op een cel om naar de toelichting te springen.</p>
   <div class="gridbox">
     <div class="y-axis">Potentieel &rarr;</div>
     <div class="cells">
       <!-- rij: hoog potentieel -->
-      <a class="cell z-dev" href="#ruwe-diamant"><span class="pos">Extra aandacht · Hoog potentieel</span><span class="nm">Ruwe Diamant</span><span class="arrow">Lees verder &rarr;</span></a>
-      <a class="cell z-good" href="#bestendige-professional"><span class="pos">Succesvol · Hoog potentieel</span><span class="nm">Bestendige Professional</span><span class="arrow">Lees verder &rarr;</span></a>
-      <a class="cell z-top" href="#super-ster"><span class="pos">Buitengewoon · Hoog potentieel</span><span class="nm">Super Ster</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell c-yellow dark" href="#ruwe-diamant"><span class="pos">Extra aandacht · Hoog potentieel</span><span class="nm">Ruwe Diamant</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell c-green" href="#bestendige-professional"><span class="pos">Succesvol · Hoog potentieel</span><span class="nm">Bestendige Professional</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell c-blue-dark" href="#super-ster"><span class="pos">Buitengewoon · Hoog potentieel</span><span class="nm">Super Ster</span><span class="arrow">Lees verder &rarr;</span></a>
       <!-- rij: potentieel aanwezig -->
-      <a class="cell z-dev" href="#presteerder-in-ontwikkeling"><span class="pos">Extra aandacht · Potentieel aanwezig</span><span class="nm">Presteerder in Ontwikkeling</span><span class="arrow">Lees verder &rarr;</span></a>
-      <a class="cell z-core" href="#kundige-professional"><span class="pos">Succesvol · Potentieel aanwezig</span><span class="nm">Kundige Professional</span><span class="arrow">Lees verder &rarr;</span></a>
-      <a class="cell z-good" href="#opkomende-ster"><span class="pos">Buitengewoon · Potentieel aanwezig</span><span class="nm">Opkomende Ster</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell c-pink dark" href="#presteerder-in-ontwikkeling"><span class="pos">Extra aandacht · Potentieel aanwezig</span><span class="nm">Presteerder in Ontwikkeling</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell c-grey-dark" href="#kundige-professional"><span class="pos">Succesvol · Potentieel aanwezig</span><span class="nm">Kundige Professional</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell c-blue-light dark" href="#opkomende-ster"><span class="pos">Buitengewoon · Potentieel aanwezig</span><span class="nm">Opkomende Ster</span><span class="arrow">Lees verder &rarr;</span></a>
       <!-- rij: potentieel bereikt -->
-      <a class="cell z-risk" href="#laagpresteerder"><span class="pos">Extra aandacht · Potentieel bereikt</span><span class="nm">Laagpresteerder</span><span class="arrow">Lees verder &rarr;</span></a>
-      <a class="cell z-core" href="#solide-bijdrager"><span class="pos">Succesvol · Potentieel bereikt</span><span class="nm">Solide Bijdrager</span><span class="arrow">Lees verder &rarr;</span></a>
-      <a class="cell z-good" href="#impactvolle-bijdrager"><span class="pos">Buitengewoon · Potentieel bereikt</span><span class="nm">Impactvolle Bijdrager</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell c-red" href="#laagpresteerder"><span class="pos">Extra aandacht · Potentieel bereikt</span><span class="nm">Laagpresteerder</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell c-grey-soft dark" href="#solide-bijdrager"><span class="pos">Succesvol · Potentieel bereikt</span><span class="nm">Solide Bijdrager</span><span class="arrow">Lees verder &rarr;</span></a>
+      <a class="cell c-grey-mid" href="#impactvolle-bijdrager"><span class="pos">Buitengewoon · Potentieel bereikt</span><span class="nm">Impactvolle Bijdrager</span><span class="arrow">Lees verder &rarr;</span></a>
     </div>
     <div class="x-axis">Performance &rarr;</div>
   </div>
-  <div class="axis-hint"><span></span><span>Links: extra aandacht nodig &nbsp;·&nbsp; rechts: buitengewoon succesvol</span></div>
+  <div class="axis-hint">Links: extra aandacht nodig &nbsp;·&nbsp; rechts: buitengewoon succesvol</div>
+ </div>
 </section>
 
 <!-- DETAIL -->
@@ -289,7 +214,7 @@ footer strong{color:#fff}
 
     <!-- SUPER STER -->
     <div class="card" id="super-ster">
-      <div class="bar z-top"></div>
+      <div class="topbar c-blue-dark"></div>
       <div class="body">
         <div class="pos-line">Buitengewoon succesvol &times; Hoog potentieel</div>
         <h3>Super Ster</h3>
@@ -304,7 +229,7 @@ footer strong{color:#fff}
 
     <!-- BESTENDIGE PROFESSIONAL -->
     <div class="card" id="bestendige-professional">
-      <div class="bar z-good"></div>
+      <div class="topbar c-green"></div>
       <div class="body">
         <div class="pos-line">Succesvol &times; Hoog potentieel</div>
         <h3>Bestendige Professional</h3>
@@ -319,7 +244,7 @@ footer strong{color:#fff}
 
     <!-- RUWE DIAMANT -->
     <div class="card" id="ruwe-diamant">
-      <div class="bar z-dev"></div>
+      <div class="topbar c-yellow"></div>
       <div class="body">
         <div class="pos-line">Extra aandacht nodig &times; Hoog potentieel</div>
         <h3>Ruwe Diamant</h3>
@@ -334,7 +259,7 @@ footer strong{color:#fff}
 
     <!-- OPKOMENDE STER -->
     <div class="card" id="opkomende-ster">
-      <div class="bar z-good"></div>
+      <div class="topbar c-blue-light"></div>
       <div class="body">
         <div class="pos-line">Buitengewoon succesvol &times; Potentieel aanwezig</div>
         <h3>Opkomende Ster</h3>
@@ -349,7 +274,7 @@ footer strong{color:#fff}
 
     <!-- KUNDIGE PROFESSIONAL -->
     <div class="card" id="kundige-professional">
-      <div class="bar z-core"></div>
+      <div class="topbar c-grey-dark"></div>
       <div class="body">
         <div class="pos-line">Succesvol &times; Potentieel aanwezig</div>
         <h3>Kundige Professional</h3>
@@ -364,7 +289,7 @@ footer strong{color:#fff}
 
     <!-- PRESTEERDER IN ONTWIKKELING -->
     <div class="card" id="presteerder-in-ontwikkeling">
-      <div class="bar z-dev"></div>
+      <div class="topbar c-pink"></div>
       <div class="body">
         <div class="pos-line">Extra aandacht nodig &times; Potentieel aanwezig</div>
         <h3>Presteerder in Ontwikkeling</h3>
@@ -379,7 +304,7 @@ footer strong{color:#fff}
 
     <!-- IMPACTVOLLE BIJDRAGER -->
     <div class="card" id="impactvolle-bijdrager">
-      <div class="bar z-good"></div>
+      <div class="topbar c-grey-mid"></div>
       <div class="body">
         <div class="pos-line">Buitengewoon succesvol &times; Potentieel bereikt</div>
         <h3>Impactvolle Bijdrager</h3>
@@ -394,7 +319,7 @@ footer strong{color:#fff}
 
     <!-- SOLIDE BIJDRAGER -->
     <div class="card" id="solide-bijdrager">
-      <div class="bar z-core"></div>
+      <div class="topbar c-grey-soft"></div>
       <div class="body">
         <div class="pos-line">Succesvol &times; Potentieel bereikt</div>
         <h3>Solide Bijdrager</h3>
@@ -409,7 +334,7 @@ footer strong{color:#fff}
 
     <!-- LAAGPRESTEERDER -->
     <div class="card" id="laagpresteerder">
-      <div class="bar z-risk"></div>
+      <div class="topbar c-red"></div>
       <div class="body">
         <div class="pos-line">Extra aandacht nodig &times; Potentieel bereikt</div>
         <h3>Laagpresteerder</h3>
